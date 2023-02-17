@@ -11,9 +11,9 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t test-app:v1 .
-      - docker tag test-app:v1 137259367863.dkr.ecr.ap-southeast-1.amazonaws.com/test-nginx:v1
+      - docker tag test-app:v1 137259367863.dkr.ecr.ap-southeast-1.amazonaws.com/test-nginx:testapp-v1
 
   post_build:
     commands:
       - echo Pushing the Docker image to ECR...
-      - docker push 137259367863.dkr.ecr.ap-southeast-1.amazonaws.com/test-nginx:v1
+      - docker push 137259367863.dkr.ecr.ap-southeast-1.amazonaws.com/test-nginx:testapp-v1
