@@ -18,5 +18,5 @@ phases:
       - echo Pushing the Docker image to ECR...
       - printf '[{"name":"test-nginx","imageUri":"%s"}]' 137259367863.dkr.ecr.ap-southeast-1.amazonaws.com/test-nginx:testapp-v1 > imagedefinitions.json
       - docker push 137259367863.dkr.ecr.ap-southeast-1.amazonaws.com/test-nginx:testapp-v1
-  artifacts:
-    files: imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
