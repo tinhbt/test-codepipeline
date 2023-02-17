@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Today's Date</title>
+  </head>
+  <body>
+    <h1>Today's Date</h1>
+    <p>Today is: <span id="current-date"></span></p>
+    <script>
+      // Get the current date and format it as a string
+      const currentDate = new Date().toLocaleDateString();
+
+      // Set the text content of the "current-date" span element to the current date
+      document.getElementById("current-date").textContent = currentDate;
+    </script>
+  </body>
+</html>
